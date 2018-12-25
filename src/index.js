@@ -21,12 +21,15 @@ function PokemonListItem({ className, component: Component = 'li', ...props }) {
 // 4. pull your resource-reading UI into a component
 function PokemonList() {
   return (
-    <ul>
-      {/* 5. read resource data */}
-      {PokemonCollectionResource.read().results.map(pokemon => (
-        <PokemonListItem key={pokemon.name}>{pokemon.name}</PokemonListItem>
-      ))}
-    </ul>
+    <section>
+      <h3>Pokemons:</h3>
+      <ul>
+        {/* 5. read resource data */}
+        {PokemonCollectionResource.read().results.map(pokemon => (
+          <PokemonListItem key={pokemon.name}>{pokemon.name}</PokemonListItem>
+        ))}
+      </ul>
+    </section>
   )
 }
 
